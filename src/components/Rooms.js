@@ -5,7 +5,7 @@ function Rooms(){
         <div>
             
             <div className="h-60 w-full " style={{background : `url('${Pattern}')`}} >
-        <h1>hey</h1>
+        <h1>heyaa</h1>
             </div>
         </div>
     )
