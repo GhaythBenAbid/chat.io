@@ -1,5 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import firebase from "../firebase";
 import { ReactComponent as Pattern } from "../assets/patternpad.svg";
 
@@ -7,6 +7,7 @@ function AuthPage() {
     const { logout } = useAuth0();
 
     const [groupchat, setGroupchat] = useState("");
+    const [groups, setGroups] = useState([]);
     const [success, setSuccess] = useState(false);
 
     function createRoom() {
@@ -15,6 +16,10 @@ function AuthPage() {
         })
     }
 
+
+    useEffect(() => {
+        firebase.firestore().collection()
+    }, []);
 
     return (
 
