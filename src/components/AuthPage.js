@@ -13,10 +13,11 @@ function AuthPage() {
 
     function createRoom() {
         setLoading(true);
+        firebase.firestore().collection("GroupChats").add({ "name": groupchat });
         firebase.firestore().collection(groupchat).add({ "hello": "world" }).then(() => {
             setSuccess(true);
             setLoading(false);
-        })
+        });
     }
 
 
